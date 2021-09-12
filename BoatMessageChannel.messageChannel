@@ -7,4 +7,4 @@
         <fieldName>recordId</fieldName>
     </lightningMessageFields>
     <masterLabel>BoatMessageChannel</masterLabel>
-</LightningMessageChannel>
+</LightningMessageChannel> 
