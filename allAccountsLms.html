@@ -1,1 +1,16 @@
+<template>
+    <template if:true={accounts}>
+        <div style="height:350px;">
+            <lightning-datatable key-field="Id"
+                                columns={accountColumns}
+                                data={accounts}
+                                onrowselection={handleRowSelection}
+                                max-row-selection="1">
+            </lightning-datatable>
+        </div>
+    </template>
 
+    <template if:false={accounts}>
+        <div class="slds-align_absolute-center">{error}</div>
+    </template>
+</template>
