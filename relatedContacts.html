@@ -1,0 +1,17 @@
+<template>
+
+    <template if:false={recordsToshow}>
+        <div class="slds-box slds-align_absolute-center">No related contacts found for the slected account.</div>
+    </template>
+
+    <template if:true={recordsToshow}>
+        <template for:each={contacts.data} for:item="contact">
+            <lightning-card key={contact.Id} title={contact.Name}>
+                <p class="slds-text-heading_medium slds-p-left_medium">{contact.Name}</p><br/>
+                <p>{contact.email}</p>
+            </lightning-card>
+            
+        </template> 
+    </template>
+    
+</template>
